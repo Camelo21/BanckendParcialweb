@@ -13,7 +13,7 @@ import com.amazonaws.util.json.JSONObject;
 
 
 @Entity
-@Table(name="libros")
+@Table(name="libros_CamMelo")
 public class Libro {
     
     @Id

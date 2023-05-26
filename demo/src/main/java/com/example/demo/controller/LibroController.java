@@ -16,7 +16,7 @@ import java.util.List;
 
 import com.example.demo.model.Libro;
 import com.example.demo.repository.libroRepository;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/crud")
 public class LibroController {
@@ -24,11 +24,6 @@ public class LibroController {
     @Autowired
     libroRepository libroRepository;
 
-    @GetMapping("/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
-    public Libro findLibro(@PathVariable String titulo){
-        return libroRepository.findByTitulo(titulo).orElse(null);
-    }
 
     @GetMapping("/read")
     @CrossOrigin(origins = "http://localhost:4200")
@@ -43,9 +38,5 @@ public class LibroController {
     }
 
 
-    @DeleteMapping("/delete/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
-    public void delete(@PathVariable Long id){
-        libroRepository.deleteById(id);
-    }
+    
 }
