@@ -4,8 +4,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import com.amazonaws.util.json.JSONObject;
 import java.util.Iterator;
 import com.amazonaws.util.json.JSONArray;
